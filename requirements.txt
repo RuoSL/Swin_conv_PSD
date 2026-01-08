@@ -1,0 +1,15 @@
+numpy
+pandas
+opencv-python
+Pillow
+tqdm
+scikit-learn
+
+torch
+torchvision
+
+pytorch-lightning
+timm
+
+# Segment Anything (可选，如果你用 SAM.py)
+# segment-anything @ git+https://github.com/facebookresearch/segment-anything.git
