@@ -9,15 +9,21 @@ This repository contains model code (Swin/Conv variants), training scripts, and 
 Typical layout (may vary slightly depending on your local setup):
 ```text
 Swin_conv_PSD/
-├─ data_preprocess/                # preprocessing utilities (optional)
-│  └─ sam_vit_b_01ec64.pth          # optional model weights (large file)
-├─ PSD_dataset/                     # dataset root (NOT recommended to push to GitHub)
-│  └─ patches_enhanced_images/      # image patches (jpg/png)
-├─ checkpoints/                     # training outputs (ckpt files), large directory
-├─ predictions/                     # inference outputs (recommended output folder)
-├─ train.py                         # training entry (example name)
-├─ predict.py                       # inference entry (example name)
-├─ requirements.txt                 # Python dependencies (recommended)
+├─ data_preprocess/                
+│  ├─ images/                          
+│  ├─ images_sam/         
+│  ├─ patches_enhanced_images/
+│  ├─ CLAHE.py 
+│  ├─ SAM.py 
+│  └─ sam_vit_b_01ec64.pth          
+├─ PSD_dataset/                     
+│  ├─ patches_enhanced_images/
+│  └─ annotations_scale.csv     
+├─ checkpoints/                     
+├─ predictions/                     
+├─ train.py                         
+├─ predict.py                    
+├─ requirements.txt                 
 └─ README.md
 ```
 ## Data location
