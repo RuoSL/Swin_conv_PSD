@@ -14,7 +14,7 @@ The scripts expect the dataset under `./PSD_dataset/` by default. The dataset is
 
 ```text
 PSD_dataset/
-|-- patches_enhanced_images_new/
+|-- patches_enhanced_images/
 |   |-- 1_patch_...
 |   |-- 3_patch_...
 |   `-- o2_1_1_tile_...
@@ -72,7 +72,7 @@ CUDA_VISIBLE_DEVICES=0 python Swin_conv.py \
   --splits 3 \
   --num_workers 4 \
   --target_scale 10 \
-  --data_dir ./PSD_dataset/patches_enhanced_images_new \
+  --data_dir ./PSD_dataset/patches_enhanced_images \
   --ann_file ./PSD_dataset/annotations_new.csv
 ```
 
@@ -86,7 +86,7 @@ CUDA_VISIBLE_DEVICES=1 python Swin_conv.py \
   --splits 3 \
   --num_workers 4 \
   --target_scale 10 \
-  --data_dir ./PSD_dataset/patches_enhanced_images_new \
+  --data_dir ./PSD_dataset/patches_enhanced_images \
   --ann_file ./PSD_dataset/annotations_new.csv
 ```
 
@@ -104,7 +104,7 @@ CUDA_VISIBLE_DEVICES=2 python Swin_conv.py \
   --splits 3 \
   --num_workers 4 \
   --target_scale 10 \
-  --data_dir ./PSD_dataset/patches_enhanced_images_new \
+  --data_dir ./PSD_dataset/patches_enhanced_images \
   --ann_file ./PSD_dataset/annotations_new.csv
 ```
 
@@ -120,7 +120,7 @@ CUDA_VISIBLE_DEVICES=0 python ResNet50.py \
   --batch_size 64 \
   --splits 3 \
   --num_workers 4 \
-  --data_dir ./PSD_dataset/patches_enhanced_images_new \
+  --data_dir ./PSD_dataset/patches_enhanced_images \
   --ann_file ./PSD_dataset/annotations_new.csv
 ```
 
@@ -132,7 +132,7 @@ CUDA_VISIBLE_DEVICES=1 python ResNet101.py \
   --batch_size 32 \
   --splits 3 \
   --num_workers 4 \
-  --data_dir ./PSD_dataset/patches_enhanced_images_new \
+  --data_dir ./PSD_dataset/patches_enhanced_images \
   --ann_file ./PSD_dataset/annotations_new.csv
 ```
 
@@ -162,7 +162,7 @@ CUDA_VISIBLE_DEVICES=0 python baseline_unet_segmentation_psd.py \
   --epochs 100 \
   --batch_size 8 \
   --splits 3 \
-  --image_dir ./PSD_dataset/patches_enhanced_images_new \
+  --image_dir ./PSD_dataset/patches_enhanced_images \
   --mask_dir ./PSD_dataset/masks \
   --ann_file ./PSD_dataset/annotations_new.csv \
   --num_workers 4
@@ -175,7 +175,7 @@ CUDA_VISIBLE_DEVICES=1 python baseline_unetpp_segmentation_psd.py \
   --epochs 100 \
   --batch_size 8 \
   --splits 3 \
-  --image_dir ./PSD_dataset/patches_enhanced_images_new \
+  --image_dir ./PSD_dataset/patches_enhanced_images \
   --mask_dir ./PSD_dataset/masks \
   --ann_file ./PSD_dataset/annotations_new.csv \
   --num_workers 4
@@ -188,7 +188,7 @@ CUDA_VISIBLE_DEVICES=2 python baseline_deeplabv3plus_segmentation_psd.py \
   --epochs 100 \
   --batch_size 8 \
   --splits 3 \
-  --image_dir ./PSD_dataset/patches_enhanced_images_new \
+  --image_dir ./PSD_dataset/patches_enhanced_images \
   --mask_dir ./PSD_dataset/masks \
   --ann_file ./PSD_dataset/annotations_new.csv \
   --num_workers 4
