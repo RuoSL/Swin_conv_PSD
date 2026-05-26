@@ -10,7 +10,7 @@ This repository contains direct PSD regression models, segmentation-based PSD ba
 
 ## Dataset Layout
 
-The scripts expect the dataset under `./PSD_dataset/` by default:
+The scripts expect the dataset under `./PSD_dataset/` by default. The dataset is not fully included in this repository; place or upload the image patches, masks, and CSV file before running experiments.
 
 ```text
 PSD_dataset/
@@ -243,8 +243,3 @@ Each experiment writes:
 - `metrics_summary.xlsx`
 - `fold*_pred_vs_gt.csv`
 
-## Notes
-
-- Direct regression models are sensitive to PSD target scale. Use `--target_scale 10` for `Swin_conv.py` experiments when training on large PSD values.
-- Segmentation-based models are not trained on PSD targets directly; changing PSD scale in the CSV affects only final PSD metric comparison, not mask training.
-- Handcrafted tree-based regressors are usually insensitive to linear target scaling after predictions are converted back.
